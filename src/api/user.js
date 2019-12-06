@@ -9,7 +9,7 @@ export function login(data) {
   })
 }
 
-//
+// 获取用户信息
 export function getInfo(token) {
   return request({
     url: '/admin/userinfo',
