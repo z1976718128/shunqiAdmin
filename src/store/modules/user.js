@@ -31,20 +31,28 @@ const mutations = {
 const actions = {
   // user login
   login({ commit }, userInfo) {
-    const { username, password } = userInfo
+    const { user_name, user_password } = userInfo
+
+    console.log(user_name, user_password)
+
     return new Promise((resolve, reject) => {
-      login({ username: username.trim(), password: password }).then(response => {
+      login({ user_name: user_name.trim(), user_password: user_password }).then(response => {
         const { data } = response
+
+        console.log(data.token)
+
         commit('SET_TOKEN', data.token)
         setToken(data.token)
         resolve()
       }).catch(error => {
+        console.log('error8888')
+
         reject(error)
       })
     })
   },
 
-  // get user info
+  // 获取用户信息
   getInfo({ commit, state }) {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
@@ -65,6 +73,7 @@ const actions = {
         commit('SET_NAME', name)
         commit('SET_AVATAR', avatar)
         commit('SET_INTRODUCTION', introduction)
+
         resolve(data)
       }).catch(error => {
         reject(error)
