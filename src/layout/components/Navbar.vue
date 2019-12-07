@@ -30,7 +30,7 @@
           <router-link to="/">
             <el-dropdown-item>管理首页</el-dropdown-item>
           </router-link>
-       
+
           <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
             <el-dropdown-item>文档</el-dropdown-item>
           </a>
@@ -75,13 +75,11 @@ export default {
       this.$store.dispatch('app/toggleSideBar')
     },
     async logout() {
-      
-      //退出，清token
+      // 退出，清token
       removeToken('SET_TOKEN')
-      //移除token
+      // 移除token
 
       this.$router.push(`/login?redirect=${this.$route.fullPath}`)
-
     }
   }
 }

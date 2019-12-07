@@ -2,8 +2,8 @@ import Cookies from 'js-cookie'
 
 const state = {
   sidebar: {
-    //强制 打开
-    opened: true , //Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
+    // 强制 打开
+    opened: true, // Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
     withoutAnimation: false
   },
   device: 'desktop',

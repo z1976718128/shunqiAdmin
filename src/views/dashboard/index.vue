@@ -10,7 +10,7 @@ import adminDashboard from './admin'
 import editorDashboard from './editor'
 
 export default {
-  name: '首页',
+  name: '',
   components: { adminDashboard, editorDashboard },
   data() {
     return {

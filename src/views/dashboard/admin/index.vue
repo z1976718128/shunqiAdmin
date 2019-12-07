@@ -71,7 +71,7 @@ const lineChartData = {
 }
 
 export default {
-  name: '首页',
+  name: '',
   components: {
     GithubCorner,
     PanelGroup,
